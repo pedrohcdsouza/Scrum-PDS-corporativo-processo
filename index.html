@@ -43,9 +43,9 @@
             <div class="highlight-box">
                 <h3>🎯 Contexto Acadêmico</h3>
                 <ul>
-                    <li><strong>Professor</strong> atua como Product Owner e Scrum Master</li>
+                    <li><strong>Professor</strong> atua como Scrum Master</li>
                     <li><strong>Equipe de desenvolvimento</strong> é auto-gerenciável</li>
-                    <li>Existe um <strong>Líder de Sprint rotativo</strong></li>
+                    <li>Existe um <strong>Líder de Sprint rotativo (PO)</strong></li>
                     <li><strong>Toda alteração</strong> no código passa por Pull Request obrigatório com revisão</li>
                     <li>As entregas são <strong>avaliadas técnica e funcionalmente</strong> pelo professor</li>
                 </ul>
@@ -193,7 +193,7 @@
             <div class="kanban-board">
                 <div class="kanban-column">
                     <h3>Product Backlog</h3>
-                    <p class="column-desc">Priorizado pelo Professor (PO)</p>
+                    <p class="column-desc">Priorizado pelo Lider da Sprint</p>
                     <div class="card">
                         <h4>US-017</h4>
                         <p>Cadastro de usuário</p>
@@ -366,19 +366,22 @@
             <h2>4. Papéis e Responsabilidades</h2>
             
             <div class="roles-grid">
-                <div class="role-card professor">
-                    <div class="role-icon">👨‍🏫</div>
-                    <h3>Product Owner (Professor)</h3>
+                 <div class="role-card leader">
+                    <div class="role-icon">⭐</div>
+                    <h3>Líder de Sprint (Rotativo)</h3>
                     <p><strong>Responsabilidades:</strong></p>
                     <ul>
-                        <li>Define objetivos do projeto</li>
-                        <li>Prioriza o Product Backlog</li>
-                        <li>Esclarece requisitos</li>
-                        <li>Aceita ou rejeita entregas</li>
-                        <li>Avalia valor e qualidade</li>
+                        <li>Eleito no início de cada Sprint</li>
+                        <li>Organiza o time durante a Sprint</li>
+                        <li>Agenda e conduz reuniões semanais</li>
+                        <li>Acompanha progresso e bloqueios</li>
+                        <li>Atua como facilitador (não é chefe)</li>
                     </ul>
+                    <div class="rotation-note">
+                        <strong>🔄 Rotação:</strong> A liderança muda a cada Sprint para promover aprendizado e responsabilidade compartilhada.
+                    </div>
+                    
                 </div>
-
                 <div class="role-card professor">
                     <div class="role-icon">🎯</div>
                     <h3>Scrum Master (Professor)</h3>
@@ -403,22 +406,7 @@
                     </ul>
                 </div>
 
-                <div class="role-card leader">
-                    <div class="role-icon">⭐</div>
-                    <h3>Líder de Sprint (Rotativo)</h3>
-                    <p><strong>Responsabilidades:</strong></p>
-                    <ul>
-                        <li>Eleito no início de cada Sprint</li>
-                        <li>Organiza o time durante a Sprint</li>
-                        <li>Agenda e conduz reuniões semanais</li>
-                        <li>Acompanha progresso e bloqueios</li>
-                        <li>Atua como facilitador (não é chefe)</li>
-                    </ul>
-                    <div class="rotation-note">
-                        <strong>🔄 Rotação:</strong> A liderança muda a cada Sprint para promover aprendizado e responsabilidade compartilhada.
-                    </div>
-                    
-                </div>
+               
                 <div class="role-card leader">
                     <div class="role-icon">🎨</div>
                     <h3>Líder de Front</h3>
@@ -453,7 +441,7 @@
             <div class="artifacts-container">
                 <div class="artifact-card">
                     <h3>📋 Product Backlog</h3>
-                    <p>Lista priorizada de User Stories mantida pelo Professor (PO)</p>
+                    <p>Lista priorizada de User Stories mantida pelo Líder da Sprint</p>
                     <ul>
                         <li>Itens sem limite de WIP</li>
                         <li>Priorizado por valor de negócio</li>
