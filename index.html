@@ -1,815 +1,521 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SPARK-Scrum - Processo Acadêmico Ágil</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="container">
-            <h1>SPARK-Scrum</h1>
-            <ul class="nav-links">
-                <li><a href="#introducao">Introdução</a></li>
-                <li><a href="#principios">Princípios</a></li>
-                <li><a href="#fluxo">Fluxo</a></li>
-                <li><a href="#papeis">Papéis</a></li>
-                <li><a href="#artefatos">Artefatos</a></li>
-                <li><a href="#eventos">Eventos</a></li>
-                <li><a href="#qualidade">Qualidade</a></li>
-                <li><a href="#metricas">Métricas</a></li>
-            </ul>
-        </div>
+      <div class="container">
+        <h1>SPARK-Scrum</h1>
+        <ul class="nav-links">
+          <li><a href="#introducao">Introdução</a></li>
+          <li><a href="#principios">Princípios</a></li>
+          <li><a href="#fluxo">Fluxo</a></li>
+          <li><a href="#papeis">Papéis</a></li>
+          <li><a href="#artefatos">Artefatos</a></li>
+          <li><a href="#eventos">Eventos</a></li>
+        </ul>
+      </div>
     </nav>
 
     <header class="hero">
-        <div class="container">
-            <h1>SPARK-Scrum</h1>
-            <p class="subtitle">Student Process for Agile Research & Knowledge – Scrum-based</p>
-            <p>Processo de desenvolvimento ágil adaptado para projetos acadêmicos</p>
-        </div>
+      <div class="container">
+        <h1>SPARK-Scrum</h1>
+        <p>
+          Processo de desenvolvimento ágil adaptado para projetos acadêmicos
+        </p>
+      </div>
     </header>
 
     <main class="container">
-        <section id="introducao" class="section">
-            <h2>1. Introdução</h2>
-            <p>
-                O <strong>SPARK-Scrum</strong> é um processo ágil iterativo e incremental utilizado em projetos de 
-                desenvolvimento de software acadêmicos. Ele promove <strong>colaboração</strong>, <strong>responsabilidade 
-                compartilhada</strong>, <strong>disciplina técnica</strong> e <strong>melhoria contínua</strong>, respeitando 
-                os princípios do Scrum e as necessidades do ambiente educacional.
-            </p>
-            <div class="highlight-box">
-                <h3>🎯 Contexto Acadêmico</h3>
-                <ul>
-                    <li><strong>Professor</strong> atua como Scrum Master</li>
-                    <li><strong>Equipe de desenvolvimento</strong> é auto-gerenciável</li>
-                    <li>Existe um <strong>Líder de Sprint rotativo (PO)</strong></li>
-                    <li><strong>Toda alteração</strong> no código passa por Pull Request obrigatório com revisão</li>
-                    <li>As entregas são <strong>avaliadas técnica e funcionalmente</strong> pelo professor</li>
-                </ul>
+      <section id="introducao" class="section">
+        <h2>1. Introdução</h2>
+        <p>
+          O <strong>SPARK-Scrum</strong> é um processo ágil iterativo e
+          incremental utilizado em projetos de desenvolvimento de software
+          acadêmicos. Ele promove <strong>colaboração</strong>,
+          <strong>responsabilidade compartilhada</strong>,
+          <strong>disciplina técnica</strong> e
+          <strong>melhoria contínua</strong>, respeitando os princípios do Scrum
+          e as necessidades do ambiente educacional.
+        </p>
+        <div class="highlight-box">
+          <h3>🎯 Contexto Acadêmico</h3>
+          <ul>
+            <li><strong>Professor</strong> atua como Validador das Entregas</li>
+            <li>
+              <strong>Equipe de desenvolvimento</strong> é auto-gerenciável
+            </li>
+            <li>Existe um <strong>Líder de Sprint rotativo</strong></li>
+            <li>
+              <strong>Toda alteração</strong> no código passa por Pull Request
+              obrigatório com revisão
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="papeis" class="section">
+        <h2>2. Papéis e Responsabilidades</h2>
+
+        <div class="roles-grid">
+          <div class="role-card leader">
+            <div class="role-icon">⭐</div>
+            <h3>Líder de Sprint (Rotativo)</h3>
+            <p><strong>Responsabilidades:</strong></p>
+            <ul>
+              <li>Eleito no início de cada Sprint</li>
+              <li>Organiza o time durante a Sprint</li>
+              <li>Agenda e conduz reuniões semanais</li>
+              <li>Acompanha progresso e bloqueios</li>
+            </ul>
+            <div class="rotation-note">
+              <strong>🔄 Rotação:</strong> A liderança muda a cada Sprint para
+              promover aprendizado e responsabilidade compartilhada.
             </div>
-            <div class="flow-path">
-                <div class="flow-item">Ideia / Caso de Uso</div>
-                <div class="arrow">→</div>
-                <div class="flow-item">Product Backlog</div>
-                <div class="arrow">→</div>
-                <div class="flow-item">Refinamento</div>
-                <div class="arrow">→</div>
-                <div class="flow-item">Sprint Backlog</div>
-                <div class="arrow">→</div>
-                <div class="flow-item">Em Desenvolvimento</div>
-                <div class="arrow">→</div>
-                <div class="flow-item">Em Revisão (PR)</div>
-                <div class="arrow">→</div>
-                <div class="flow-item">Em Teste</div>
-                <div class="arrow">→</div>
-                <div class="flow-item">Concluído</div>
+          </div>
+          <div class="role-card professor">
+            <div class="role-icon">🎯</div>
+            <h3>Professor</h3>
+            <p><strong>Responsabilidades:</strong></p>
+            <ul>
+              <li>Atua como validador das entregas</li>
+              <li>Pode definir prioridades das User Stories</li>
+              <li>Pode validar e aprovar casos de uso</li>
+              <li>Aceita formalmente as entregas na Sprint Review</li>
+              <li>Fornece feedback constante ao time</li>
+            </ul>
+          </div>
+
+          <div class="role-card team">
+            <div class="role-icon">👥</div>
+            <h3>Equipe de Desenvolvimento</h3>
+            <p><strong>Características:</strong></p>
+            <ul>
+              <li>Auto-organizável e multifuncional</li>
+              <li>Estima, desenvolve, testa e entrega</li>
+              <li>Responsável pela qualidade técnica</li>
+              <li>Participa de todas as cerimônias</li>
+            </ul>
+          </div>
+
+          <div class="role-card leader">
+            <div class="role-icon">🎨</div>
+            <h3>Líder de Front</h3>
+            <p><strong>Responsabilidades:</strong></p>
+            <ul>
+              <li>Lidera os testes de frontend</li>
+              <li>Garante qualidade da interface</li>
+              <li>Valida responsividade e UX</li>
+              <li>Revisa Pull Requests de frontend</li>
+              <li>Define padrões de código do frontend</li>
+            </ul>
+          </div>
+
+          <div class="role-card leader">
+            <div class="role-icon">⚙️</div>
+            <h3>Líder de Back</h3>
+            <p><strong>Responsabilidades:</strong></p>
+            <ul>
+              <li>Lidera os testes de backend</li>
+              <li>Garante qualidade das APIs</li>
+              <li>Valida integração e performance</li>
+              <li>Revisa Pull Requests de backend</li>
+              <li>Define padrões de código do backend</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="principios" class="section">
+        <h2>3. Princípios do SPARK-Scrum</h2>
+        <div class="principles-grid">
+          <div class="principle-card">
+            <div class="principle-icon">📚</div>
+            <h3>Aprendizado Prático</h3>
+            <p>Orientado à entrega real de software funcional</p>
+          </div>
+          <div class="principle-card">
+            <div class="principle-icon">👁️</div>
+            <h3>Transparência Total</h3>
+            <p>Visibilidade completa do trabalho e progresso</p>
+          </div>
+          <div class="principle-card">
+            <div class="principle-icon">⚙️</div>
+            <h3>Qualidade Técnica</h3>
+            <p>Código revisado, testado e bem documentado</p>
+          </div>
+          <div class="principle-card">
+            <div class="principle-icon">🤝</div>
+            <h3>Colaboração</h3>
+            <p>Responsabilidade coletiva pelo sucesso</p>
+          </div>
+          <div class="principle-card">
+            <div class="principle-icon">🔄</div>
+            <h3>Liderança Rotativa</h3>
+            <p>Desenvolvimento de habilidades de gestão</p>
+          </div>
+          <div class="principle-card">
+            <div class="principle-icon">💬</div>
+            <h3>Feedback Contínuo</h3>
+            <p>Avaliação constante do professor</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="fluxo" class="section">
+        <h2>4. Diagrama</h2>
+        <p>
+          O SPARK-Scrum segue um fluxo iterativo e incremental com revisão
+          obrigatória:
+        </p>
+
+        <div class="uml-diagram">
+          <img src="SPARK-Scrum.png" alt="Diagrama UML do SPARK-Scrum" />
+        </div>
+
+        <div class="diagram-notes">
+          <div class="note-box">
+            <h4>� Pontos-Chave do Fluxo</h4>
+            <ul>
+              <li>
+                <strong>Pull Request obrigatório</strong> - Nenhum código entra
+                sem revisão
+              </li>
+              <li>
+                <strong>Loop de qualidade</strong> - Testes reprovados retornam
+                ao desenvolvimento
+              </li>
+              <li>
+                <strong>Aceite formal</strong> - Professor valida todas as
+                entregas
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="kanban-board">
+          <div class="kanban-column">
+            <h3>Sprint Backlog</h3>
+            <p class="column-desc">Priorizado pelo Lider da Sprint</p>
+            <div class="card">
+              <h4>US-017</h4>
+              <p>Cadastro de usuário</p>
+              <span class="priority high">Alta</span>
+              <span class="points">8 pontos</span>
             </div>
-        </section>
+          </div>
 
-        <section id="principios" class="section">
-            <h2>2. Princípios do SPARK-Scrum</h2>
-            <div class="principles-grid">
-                <div class="principle-card">
-                    <div class="principle-icon">📚</div>
-                    <h3>Aprendizado Prático</h3>
-                    <p>Orientado à entrega real de software funcional</p>
-                </div>
-                <div class="principle-card">
-                    <div class="principle-icon">👁️</div>
-                    <h3>Transparência Total</h3>
-                    <p>Visibilidade completa do trabalho e progresso</p>
-                </div>
-                <div class="principle-card">
-                    <div class="principle-icon">⚙️</div>
-                    <h3>Qualidade Técnica</h3>
-                    <p>Código revisado, testado e bem documentado</p>
-                </div>
-                <div class="principle-card">
-                    <div class="principle-icon">🤝</div>
-                    <h3>Colaboração</h3>
-                    <p>Responsabilidade coletiva pelo sucesso</p>
-                </div>
-                <div class="principle-card">
-                    <div class="principle-icon">🔄</div>
-                    <h3>Liderança Rotativa</h3>
-                    <p>Desenvolvimento de habilidades de gestão</p>
-                </div>
-                <div class="principle-card">
-                    <div class="principle-icon">💬</div>
-                    <h3>Feedback Contínuo</h3>
-                    <p>Avaliação constante do professor</p>
-                </div>
+          <div class="kanban-column">
+            <h3>Em Desenvolvimento</h3>
+            <p class="column-desc">Time trabalhando</p>
+            <div class="card task">
+              <h4>TASK-01</h4>
+              <p>Criar formulário</p>
+              <span class="time">4h</span>
             </div>
-        </section>
+          </div>
 
-        <section id="fluxo" class="section">
-            <h2>3. Fluxo Geral do Processo</h2>
-            <p>O SPARK-Scrum segue um fluxo iterativo e incremental com revisão obrigatória:</p>
-            
-            <div class="uml-diagram">
-                <!-- Linha 1: Planejamento -->
-                <div class="uml-flow-row">
-                    <div class="uml-node-compact start">
-                        <h4>Início</h4>
-                        <p>Ideia/Caso de Uso</p>
-                    </div>
-                    <div class="uml-connector">→</div>
-                    <div class="uml-node-compact">
-                        <h4>Product Backlog</h4>
-                        <p>Priorização (PO)</p>
-                    </div>
-                    <div class="uml-connector">→</div>
-                    <div class="uml-node-compact">
-                        <h4>Refinamento</h4>
-                        <p>Tasks + Estimativas</p>
-                    </div>
-                    <div class="uml-connector">→</div>
-                    <div class="uml-node-compact">
-                        <h4>Sprint Planning</h4>
-                        <p>Seleção + Líder</p>
-                    </div>
-                </div>
-
-                <div class="uml-flow-separator">↓</div>
-
-                <!-- Linha 2: Desenvolvimento e Testes -->
-                <div class="uml-flow-row">
-                    <div class="uml-node-compact development">
-                        <h4>Desenvolvimento</h4>
-                        <p>Implementação</p>
-                    </div>
-                    <div class="uml-connector">→</div>
-                    <div class="uml-node-compact review">
-                        <h4>Pull Request</h4>
-                        <p>Code Review</p>
-                    </div>
-                    <div class="uml-connector">→</div>
-                    <div class="uml-node-compact test">
-                        <h4>Testes</h4>
-                        <p>Validação QA</p>
-                    </div>
-                    <div class="uml-connector decision-arrow">→</div>
-                    <div class="uml-decision-compact">
-                        <span>Aprovado?</span>
-                    </div>
-                </div>
-
-                <!-- Linha 3: Decisão e Conclusão -->
-                <div class="uml-flow-row final-row">
-                    <div class="uml-return-path">
-                        <div class="return-label">❌ Reprovado</div>
-                        <div class="return-arrow">↰ Volta ao Desenvolvimento</div>
-                    </div>
-                    <div class="uml-success-path">
-                        <div class="success-arrow">↓ ✅ Aprovado</div>
-                        <div class="uml-node-compact success">
-                            <h4>Concluído</h4>
-                            <p>Aceite PO</p>
-                        </div>
-                        <div class="uml-connector">→</div>
-                        <div class="uml-node-compact end">
-                            <h4>Sprint Review</h4>
-                            <p>Demo + Retro</p>
-                        </div>
-                    </div>
-                </div>
+          <div class="kanban-column">
+            <h3>Em Revisão (PR)</h3>
+            <p class="column-desc">Aguardando aprovação</p>
+            <div class="card review">
+              <h4>PR #23</h4>
+              <p>Validações de campo</p>
+              <span class="status">1 aprovação</span>
             </div>
+          </div>
 
-            <div class="diagram-notes">
-                <div class="note-box">
-                    <h4>� Pontos-Chave do Fluxo</h4>
-                    <ul>
-                        <li><strong>Pull Request obrigatório</strong> - Nenhum código entra sem revisão</li>
-                        <li><strong>Loop de qualidade</strong> - Testes reprovados retornam ao desenvolvimento</li>
-                        <li><strong>Aceite formal</strong> - Professor valida todas as entregas</li>
-                        <li><strong>Retrospectiva</strong> - Melhoria contínua do processo</li>
-                    </ul>
-                </div>
+          <div class="kanban-column">
+            <h3>Concluído</h3>
+            <p class="column-desc">Aceito pelo Professor</p>
+            <div class="card done">
+              <h4>US-013</h4>
+              <p>Login de usuário</p>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div class="kanban-board">
-                <div class="kanban-column">
-                    <h3>Product Backlog</h3>
-                    <p class="column-desc">Priorizado pelo Lider da Sprint</p>
-                    <div class="card">
-                        <h4>US-017</h4>
-                        <p>Cadastro de usuário</p>
-                        <span class="priority high">Alta</span>
-                        <span class="points">8 pontos</span>
-                    </div>
-                </div>
+      <section id="atividades" class="section">
+        <h2>5. Tabela de Atividades</h2>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Etapa</th>
+                <th>Objetivo</th>
+                <th>Entradas</th>
+                <th>Atividades</th>
+                <th>Saídas</th>
+                <th>Políticas</th>
+                <th>Métricas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Levantar e refinar requisitos</strong></td>
+                <td>Identificar e documentar necessidades do sistema</td>
+                <td>
+                  Demandas do professor, feedbacks, necessidades do projeto
+                </td>
+                <td>
+                  Discussão em grupo, análise de requisitos, criação de casos de
+                  uso
+                </td>
+                <td>Casos de uso validados e documentados</td>
+                <td>
+                  Clareza de valor, aprovação do professor, alinhamento com
+                  objetivos
+                </td>
+                <td>Tempo de definição, número de casos de uso criados</td>
+              </tr>
+              <tr>
+                <td><strong>Planejamento da Sprint</strong></td>
+                <td>Definir escopo e organizar trabalho da Sprint</td>
+                <td>Casos de uso validados</td>
+                <td>
+                  Líder da Sprint define casos de uso prioritários, cria e
+                  quebra tasks, estima esforço, monta Sprint Backlog
+                </td>
+                <td>Sprint Backlog com tasks detalhadas e estimadas</td>
+                <td>
+                  Capacidade do time, DoR atendido, escopo fechado durante
+                  Sprint
+                </td>
+                <td>
+                  Story Points planejados, número de tasks, capacidade vs
+                  planejado
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Implementação de novas funcionalidades</strong>
+                </td>
+                <td>Desenvolver as funcionalidades planejadas</td>
+                <td>Tasks do Sprint Backlog</td>
+                <td>
+                  Codificação, commits, criação de branches, desenvolvimento
+                  colaborativo
+                </td>
+                <td>Código implementado em branch, Pull Request criado</td>
+                <td>
+                  Padrões de código, commits descritivos, branch por
+                  funcionalidade
+                </td>
+                <td>
+                  Velocidade de desenvolvimento, commits por dia, tempo por task
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Testes (Review)</strong></td>
+                <td>Garantir qualidade técnica através de revisão e testes</td>
+                <td>Pull Request com código implementado</td>
+                <td>
+                  Revisão de código (PR), testes automatizados, testes manuais,
+                  validação de critérios técnicos
+                </td>
+                <td>PR aprovado, código validado, funcionalidade testada</td>
+                <td>
+                  PR obrigatório, mínimo de aprovações, DoD técnico cumprido
+                </td>
+                <td>
+                  Número de PRs, tempo de revisão, defeitos encontrados, taxa de
+                  aprovação
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Reunião de revisão da Sprint</strong></td>
+                <td>Validar entregas e obter feedback do professor</td>
+                <td>
+                  Funcionalidades implementadas e testadas, Sprint concluída
+                </td>
+                <td>
+                  Demonstração das funcionalidades, apresentação ao professor,
+                  validação de entregas, coleta de feedback
+                </td>
+                <td>
+                  Entregas aprovadas pelo professor, feedback documentado,
+                  incremento validado
+                </td>
+                <td>
+                  Transparência total, demonstração funcional, aceite formal do
+                  professor
+                </td>
+                <td>
+                  Taxa de aceite, Story Points entregues, feedback recebido,
+                  itens aprovados vs planejados
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-                <div class="kanban-column">
-                    <h3>Sprint Backlog</h3>
-                    <p class="column-desc">Itens da Sprint atual</p>
-                    <div class="card">
-                        <h4>US-017</h4>
-                        <p>Cadastro de usuário</p>
-                    </div>
-                </div>
+      <section id="artefatos" class="section">
+        <h2>6. Artefatos do Processo</h2>
 
-                <div class="kanban-column">
-                    <h3>Em Desenvolvimento</h3>
-                    <p class="column-desc">Time trabalhando</p>
-                    <div class="card task">
-                        <h4>TASK-01</h4>
-                        <p>Criar formulário</p>
-                        <span class="time">4h</span>
-                    </div>
-                </div>
+        <div class="artifacts-container">
 
-                <div class="kanban-column">
-                    <h3>Em Revisão (PR)</h3>
-                    <p class="column-desc">Aguardando aprovação</p>
-                    <div class="card review">
-                        <h4>PR #23</h4>
-                        <p>Validações de campo</p>
-                        <span class="status">1 aprovação</span>
-                    </div>
-                </div>
+          <div class="artifact-card">
+            <h3>📝 Sprint Backlog</h3>
+            <p>Conjunto de Stories selecionadas para a Sprint</p>
+            <ul>
+              <li>Definido pela equipe com base na capacidade</li>
+              <li>Escopo fechado durante a Sprint</li>
+              <li>Decomposto em tasks</li>
+            </ul>
+          </div>
 
-                <div class="kanban-column">
-                    <h3>Em Teste</h3>
-                    <p class="column-desc">Validação funcional</p>
-                    <ul class="test-list">
-                        <li>Testes unitários ✓</li>
-                        <li>Testes funcionais</li>
-                    </ul>
-                </div>
-
-                <div class="kanban-column">
-                    <h3>Concluído</h3>
-                    <p class="column-desc">Aceito pelo Professor</p>
-                    <div class="card done">
-                        <h4>US-013</h4>
-                        <p>Login de usuário</p>
-                    </div>
-                </div>
+          <div class="artifact-card">
+            <h3>📖 User Stories</h3>
+            <p><strong>Formato:</strong></p>
+            <div class="story-format">
+              Como <em>[usuário]</em>, quero <em>[funcionalidade]</em> para
+              <em>[benefício]</em>
             </div>
-        </section>
+            <p><strong>Cada Story possui:</strong></p>
+            <ul>
+              <li>Prioridade (definida pelo professor)</li>
+              <li>Pontuação (baseada no esforço)</li>
+              <li>Tasks associadas</li>
+              <li>Critérios de aceitação</li>
+            </ul>
+          </div>
 
-        <section id="atividades" class="section">
-            <h2>Tabela de Atividades</h2>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Etapa</th>
-                            <th>Objetivo</th>
-                            <th>Entradas</th>
-                            <th>Atividades</th>
-                            <th>Saídas</th>
-                            <th>Políticas</th>
-                            <th>Métricas</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Ideia / Caso de Uso</td>
-                            <td>Identificar necessidade</td>
-                            <td>Demandas, feedbacks</td>
-                            <td>Discussão em grupo</td>
-                            <td>Caso de uso validado</td>
-                            <td>Clareza de valor</td>
-                            <td>Tempo de decisão</td>
-                        </tr>
-                        <tr>
-                            <td>Product Backlog</td>
-                            <td>Organizar demandas</td>
-                            <td>Casos de uso</td>
-                            <td>Criar stories, priorizar</td>
-                            <td>Stories priorizadas</td>
-                            <td>Backlog ordenado</td>
-                            <td>Age do backlog</td>
-                        </tr>
-                        <tr>
-                            <td>Refinamento</td>
-                            <td>Preparar stories</td>
-                            <td>Story bruta</td>
-                            <td>Quebrar em tasks, estimar</td>
-                            <td>Story pronta</td>
-                            <td>DoR definido</td>
-                            <td>% stories prontas</td>
-                        </tr>
-                        <tr>
-                            <td>Sprint Planning</td>
-                            <td>Planejar Sprint</td>
-                            <td>Backlog priorizado</td>
-                            <td>Selecionar stories</td>
-                            <td>Sprint Backlog</td>
-                            <td>Capacidade do time</td>
-                            <td>Pontos planejados</td>
-                        </tr>
-                        <tr>
-                            <td>Desenvolvimento</td>
-                            <td>Construir solução</td>
-                            <td>Tasks</td>
-                            <td>Codar, testar, revisar</td>
-                            <td>Funcionalidade pronta</td>
-                            <td>Sprint fechada</td>
-                            <td>Velocidade</td>
-                        </tr>
-                        <tr>
-                            <td>Testes</td>
-                            <td>Garantir qualidade</td>
-                            <td>Build</td>
-                            <td>Testes auto e manuais</td>
-                            <td>Story validada</td>
-                            <td>DoD</td>
-                            <td>Defeitos</td>
-                        </tr>
-                        <tr>
-                            <td>Review</td>
-                            <td>Validar valor</td>
-                            <td>Sprint concluída</td>
-                            <td>Demonstração</td>
-                            <td>Feedback</td>
-                            <td>Transparência</td>
-                            <td>Aceite</td>
-                        </tr>
-                        <tr>
-                            <td>Retrospectiva</td>
-                            <td>Melhorar processo</td>
-                            <td>Dados da Sprint</td>
-                            <td>Análise e ações</td>
-                            <td>Plano de melhoria</td>
-                            <td>Ação clara</td>
-                            <td>Ações concluídas</td>
-                        </tr>
-                        <tr>
-                            <td>Implantação</td>
-                            <td>Disponibilizar software</td>
-                            <td>Funcionalidades prontas</td>
-                            <td>Deploy, configuração</td>
-                            <td>Software em produção</td>
-                            <td>CI/CD ativo</td>
-                            <td>Tempo de deploy</td>
-                        </tr>
-                        <tr>
-                            <td>Gerência do Projeto</td>
-                            <td>Acompanhar progresso</td>
-                            <td>Métricas, impedimentos</td>
-                            <td>Daily, relatórios</td>
-                            <td>Status atualizado</td>
-                            <td>Transparência</td>
-                            <td>Burndown, Velocity</td>
-                        </tr>
-                    </tbody>
-                </table>
+          <div class="artifact-card">
+            <h3>✅ Tasks</h3>
+            <p>Unidades de trabalho derivadas das Stories</p>
+            <ul>
+              <li>Estimadas em tempo (horas)</li>
+              <li>Base para cálculo da pontuação</li>
+              <li>Atribuídas aos membros do time</li>
+              <li>Rastreadas no quadro</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="estimation-box">
+          <h3>🎯 Estimativas e Pontuação</h3>
+          <ol>
+            <li>
+              Cada <strong>Task</strong> recebe uma estimativa em
+              <strong>horas</strong>
+            </li>
+            <li>
+              A <strong>soma das horas das Tasks</strong> define o esforço total
+              da Story
+            </li>
+            <li>O esforço é convertido em <strong>Story Points</strong></li>
+            <li>
+              A pontuação representa o <strong>esforço técnico total</strong>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="eventos" class="section">
+        <h2>7. Eventos</h2>
+
+        <div class="events-timeline">
+          <div class="event-card">
+            <div class="event-icon">🚀</div>
+            <h3>Sprint Planning</h3>
+            <p><strong>Objetivo:</strong> Planejar o trabalho da Sprint</p>
+            <ul>
+              <li>Definição das Stories da Sprint</li>
+              <li>Quebra em Tasks</li>
+              <li>Estimativas de esforço</li>
+              <li>Definição do Líder da Sprint</li>
+            </ul>
+            <div class="event-participants">
+              <strong>Participantes:</strong> Time completo
             </div>
-        </section>
+          </div>
 
-        <section id="papeis" class="section">
-            <h2>4. Papéis e Responsabilidades</h2>
-            
-            <div class="roles-grid">
-                 <div class="role-card leader">
-                    <div class="role-icon">⭐</div>
-                    <h3>Líder de Sprint (Rotativo)</h3>
-                    <p><strong>Responsabilidades:</strong></p>
-                    <ul>
-                        <li>Eleito no início de cada Sprint</li>
-                        <li>Organiza o time durante a Sprint</li>
-                        <li>Agenda e conduz reuniões semanais</li>
-                        <li>Acompanha progresso e bloqueios</li>
-                        <li>Atua como facilitador (não é chefe)</li>
-                    </ul>
-                    <div class="rotation-note">
-                        <strong>🔄 Rotação:</strong> A liderança muda a cada Sprint para promover aprendizado e responsabilidade compartilhada.
-                    </div>
-                    
-                </div>
-                <div class="role-card professor">
-                    <div class="role-icon">🎯</div>
-                    <h3>Scrum Master (Professor)</h3>
-                    <p><strong>Responsabilidades:</strong></p>
-                    <ul>
-                        <li>Garante uso correto do processo</li>
-                        <li>Facilita eventos Scrum</li>
-                        <li>Remove impedimentos organizacionais</li>
-                        <li>Orienta sobre boas práticas ágeis</li>
-                    </ul>
-                </div>
-
-                <div class="role-card team">
-                    <div class="role-icon">👥</div>
-                    <h3>Equipe de Desenvolvimento</h3>
-                    <p><strong>Características:</strong></p>
-                    <ul>
-                        <li>Auto-organizável e multifuncional</li>
-                        <li>Estima, desenvolve, testa e entrega</li>
-                        <li>Responsável pela qualidade técnica</li>
-                        <li>Participa de todas as cerimônias</li>
-                    </ul>
-                </div>
-
-               
-                <div class="role-card leader">
-                    <div class="role-icon">🎨</div>
-                    <h3>Líder de Front</h3>
-                    <p><strong>Responsabilidades:</strong></p>
-                    <ul>
-                        <li>Lidera os testes de frontend</li>
-                        <li>Garante qualidade da interface</li>
-                        <li>Valida responsividade e UX</li>
-                        <li>Revisa Pull Requests de frontend</li>
-                        <li>Define padrões de código do frontend</li>
-                    </ul>
-                </div>
-
-                <div class="role-card leader">
-                    <div class="role-icon">⚙️</div>
-                    <h3>Líder de Back</h3>
-                    <p><strong>Responsabilidades:</strong></p>
-                    <ul>
-                        <li>Lidera os testes de backend</li>
-                        <li>Garante qualidade das APIs</li>
-                        <li>Valida integração e performance</li>
-                        <li>Revisa Pull Requests de backend</li>
-                        <li>Define padrões de código do backend</li>
-                    </ul>
-                </div>
+          <div class="event-card">
+            <div class="event-icon">📅</div>
+            <h3>Reuniões Semanais</h3>
+            <p><strong>Objetivo:</strong> Sincronização e alinhamento</p>
+            <ul>
+              <li>Organizadas pelo Líder da Sprint</li>
+              <li>Alinhamento de progresso</li>
+              <li>Identificação de bloqueios</li>
+              <li>Ajustes de planejamento</li>
+            </ul>
+            <div class="event-participants">
+              <strong>Facilitador:</strong> Líder da Sprint
             </div>
-        </section>
+          </div>
 
-        <section id="artefatos" class="section">
-            <h2>5. Artefatos do Processo</h2>
-            
-            <div class="artifacts-container">
-                <div class="artifact-card">
-                    <h3>📋 Product Backlog</h3>
-                    <p>Lista priorizada de User Stories mantida pelo Líder da Sprint</p>
-                    <ul>
-                        <li>Itens sem limite de WIP</li>
-                        <li>Priorizado por valor de negócio</li>
-                        <li>Refinado continuamente</li>
-                    </ul>
-                </div>
-
-                <div class="artifact-card">
-                    <h3>📝 Sprint Backlog</h3>
-                    <p>Conjunto de Stories selecionadas para a Sprint</p>
-                    <ul>
-                        <li>Definido pela equipe com base na capacidade</li>
-                        <li>Escopo fechado durante a Sprint</li>
-                        <li>Decomposto em tasks</li>
-                    </ul>
-                </div>
-
-                <div class="artifact-card">
-                    <h3>📖 User Stories</h3>
-                    <p><strong>Formato:</strong></p>
-                    <div class="story-format">
-                        Como <em>[usuário]</em>, quero <em>[funcionalidade]</em> para <em>[benefício]</em>
-                    </div>
-                    <p><strong>Cada Story possui:</strong></p>
-                    <ul>
-                        <li>Prioridade (definida pelo professor)</li>
-                        <li>Pontuação (baseada no esforço)</li>
-                        <li>Tasks associadas</li>
-                        <li>Critérios de aceitação</li>
-                    </ul>
-                </div>
-
-                <div class="artifact-card">
-                    <h3>✅ Tasks</h3>
-                    <p>Unidades de trabalho derivadas das Stories</p>
-                    <ul>
-                        <li>Estimadas em tempo (horas)</li>
-                        <li>Base para cálculo da pontuação</li>
-                        <li>Atribuídas aos membros do time</li>
-                        <li>Rastreadas no quadro</li>
-                    </ul>
-                </div>
+          <div class="event-card">
+            <div class="event-icon">🎬</div>
+            <h3>Sprint Review</h3>
+            <p><strong>Objetivo:</strong> Validar o valor entregue</p>
+            <ul>
+              <li>Demonstração do que foi desenvolvido</li>
+              <li>Feedback do professor</li>
+              <li>Validação de funcionalidades</li>
+              <li>Aceite formal</li>
+            </ul>
+            <div class="event-participants">
+              <strong>Avaliador:</strong> Professor
             </div>
+          </div>
 
-            <div class="estimation-box">
-                <h3>🎯 Estimativas e Pontuação</h3>
-                <ol>
-                    <li>Cada <strong>Task</strong> recebe uma estimativa em <strong>horas</strong></li>
-                    <li>A <strong>soma das horas das Tasks</strong> define o esforço total da Story</li>
-                    <li>O esforço é convertido em <strong>Story Points</strong></li>
-                    <li>A pontuação representa o <strong>esforço técnico total</strong></li>
-                </ol>
+          
+        </div>
+      </section>
+      <section id="qualidade" class="section">
+       
+      <section id="encerramento" class="section conclusion">
+        <h2>8. Encerramento</h2>
+        <div class="conclusion-box">
+          <h3>🎓 O SPARK-Scrum garante:</h3>
+          <div class="benefits-grid">
+            <div class="benefit-item">
+              <span class="benefit-icon">📋</span>
+              <p><strong>Organização clara</strong> do projeto</p>
             </div>
-        </section>
-
-        <section id="eventos" class="section">
-            <h2>6. Eventos Scrum</h2>
-            
-            <div class="events-timeline">
-                <div class="event-card">
-                    <div class="event-icon">🚀</div>
-                    <h3>Sprint Planning</h3>
-                    <p><strong>Objetivo:</strong> Planejar o trabalho da Sprint</p>
-                    <ul>
-                        <li>Definição das Stories da Sprint</li>
-                        <li>Quebra em Tasks</li>
-                        <li>Estimativas de esforço</li>
-                        <li>Definição do Líder da Sprint</li>
-                    </ul>
-                    <div class="event-participants">
-                        <strong>Participantes:</strong> Professor, Time completo
-                    </div>
-                </div>
-
-                <div class="event-card">
-                    <div class="event-icon">📅</div>
-                    <h3>Reuniões Semanais</h3>
-                    <p><strong>Objetivo:</strong> Sincronização e alinhamento</p>
-                    <ul>
-                        <li>Organizadas pelo Líder da Sprint</li>
-                        <li>Alinhamento de progresso</li>
-                        <li>Identificação de bloqueios</li>
-                        <li>Ajustes de planejamento</li>
-                    </ul>
-                    <div class="event-participants">
-                        <strong>Facilitador:</strong> Líder da Sprint
-                    </div>
-                </div>
-
-                <div class="event-card">
-                    <div class="event-icon">🎬</div>
-                    <h3>Sprint Review</h3>
-                    <p><strong>Objetivo:</strong> Validar o valor entregue</p>
-                    <ul>
-                        <li>Demonstração do que foi desenvolvido</li>
-                        <li>Feedback do professor</li>
-                        <li>Validação de funcionalidades</li>
-                        <li>Aceite formal</li>
-                    </ul>
-                    <div class="event-participants">
-                        <strong>Avaliador:</strong> Professor (PO)
-                    </div>
-                </div>
-
-                <div class="event-card">
-                    <div class="event-icon">🔄</div>
-                    <h3>Sprint Retrospective</h3>
-                    <p><strong>Objetivo:</strong> Melhorar o processo</p>
-                    <ul>
-                        <li>Avaliação do processo</li>
-                        <li>Pontos positivos e melhorias</li>
-                        <li>Definição de 2–3 ações práticas</li>
-                        <li>Compromisso com mudanças</li>
-                    </ul>
-                    <div class="event-participants">
-                        <strong>Facilitador:</strong> Professor (SM)
-                    </div>
-                </div>
+            <div class="benefit-item">
+              <span class="benefit-icon">🎯</span>
+              <p><strong>Aprendizado real</strong> de Scrum</p>
             </div>
-        </section>
-        <section id="qualidade" class="section">
-            <h2>7. Desenvolvimento e Qualidade Técnica</h2>
-            
-            <div class="quality-grid">
-                <div class="quality-card">
-                    <h3>📝 Políticas de Código</h3>
-                    <div class="policy-list">
-                        <div class="policy-item">
-                            <span class="policy-badge mandatory">Obrigatório</span>
-                            <p>Toda alteração exige Pull Request</p>
-                        </div>
-                        <div class="policy-item">
-                            <span class="policy-badge forbidden">Proibido</span>
-                            <p>Nenhum commit direto na branch principal</p>
-                        </div>
-                        <div class="policy-item">
-                            <span class="policy-badge mandatory">Obrigatório</span>
-                            <p>Mínimo de 1 aprovação de outro membro</p>
-                        </div>
-                        <div class="policy-item">
-                            <span class="policy-badge mandatory">Obrigatório</span>
-                            <p>Code review antes do merge</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="quality-card">
-                    <h3>📋 Conteúdo do Pull Request</h3>
-                    <ul>
-                        <li><strong>Descrição clara</strong> da mudança</li>
-                        <li><strong>Referência</strong> à User Story/Task</li>
-                        <li><strong>Evidências de teste</strong> (prints, logs)</li>
-                        <li><strong>Checklist</strong> de validação</li>
-                    </ul>
-                </div>
-
-                <div class="quality-card">
-                    <h3>✅ Testes</h3>
-                    <ul>
-                        <li><strong>Testes unitários</strong> sempre que possível</li>
-                        <li><strong>Testes funcionais</strong> das features</li>
-                        <li><strong>Testes exploratórios</strong> manuais</li>
-                        <li><strong>Validação</strong> de critérios de aceitação</li>
-                    </ul>
-                </div>
+            <div class="benefit-item">
+              <span class="benefit-icon">⚙️</span>
+              <p><strong>Disciplina técnica</strong> profissional</p>
             </div>
-
-            <div class="dod-dor-container">
-                <div class="definition-box dor">
-                    <h3>📌 Definition of Ready (DoR)</h3>
-                    <p>Uma Story está pronta para entrar na Sprint quando:</p>
-                    <ul>
-                        <li>✓ Objetivo claro e compreendido</li>
-                        <li>✓ Critérios de aceitação definidos</li>
-                        <li>✓ Tasks identificadas</li>
-                        <li>✓ Estimativas realizadas</li>
-                        <li>✓ Dependências resolvidas</li>
-                    </ul>
-                </div>
-
-                <div class="definition-box dod">
-                    <h3>✅ Definition of Done (DoD)</h3>
-                    <p>Uma Story é considerada concluída quando:</p>
-                    <ul>
-                        <li>✓ Código implementado</li>
-                        <li>✓ Pull Request aprovado</li>
-                        <li>✓ Testes executados com sucesso</li>
-                        <li>✓ Funcionalidade funcionando</li>
-                        <li>✓ <strong>Aceite do professor (PO)</strong></li>
-                    </ul>
-                </div>
+            <div class="benefit-item">
+              <span class="benefit-icon">✅</span>
+              <p><strong>Avaliação justa</strong> e transparente</p>
             </div>
-        </section>
-
-        <section id="metricas" class="section">
-            <h2>8. Métricas Acompanhadas</h2>
-            
-            <div class="metrics-grid">
-                <div class="metric-card">
-                    <div class="metric-icon">📈</div>
-                    <h3>Velocidade por Sprint</h3>
-                    <p>Story Points concluídos por Sprint</p>
-                </div>
-
-                <div class="metric-card">
-                    <div class="metric-icon">✅</div>
-                    <h3>Taxa de Conclusão</h3>
-                    <p>% de Stories concluídas vs planejadas</p>
-                </div>
-
-                <div class="metric-card">
-                    <div class="metric-icon">🔍</div>
-                    <h3>Pull Requests</h3>
-                    <p>Número de PRs por Sprint</p>
-                </div>
-
-                <div class="metric-card">
-                    <div class="metric-icon">🎯</div>
-                    <h3>Ações de Retro</h3>
-                    <p>Ações de retrospectiva concluídas</p>
-                </div>
-
-                <div class="metric-card">
-                    <div class="metric-icon">📊</div>
-                    <h3>Previsibilidade</h3>
-                    <p>Capacidade de prever entregas</p>
-                </div>
-
-                <div class="metric-card">
-                    <div class="metric-icon">⏱️</div>
-                    <h3>Lead Time</h3>
-                    <p>Tempo médio de conclusão de Stories</p>
-                </div>
+            <div class="benefit-item">
+              <span class="benefit-icon">💼</span>
+              <p><strong>Preparação prática</strong> para o mercado</p>
             </div>
-        </section>
-
-        <section id="atividades" class="section">
-            <h2>9. Tabela de Atividades Detalhadas</h2>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Etapa</th>
-                            <th>Objetivo</th>
-                            <th>Entradas</th>
-                            <th>Atividades</th>
-                            <th>Saídas</th>
-                            <th>Políticas</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Ideia / Caso de Uso</strong></td>
-                            <td>Identificar necessidade</td>
-                            <td>Demandas, feedbacks</td>
-                            <td>Discussão com professor e grupo</td>
-                            <td>Caso de uso validado</td>
-                            <td>Clareza de valor de negócio</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Product Backlog</strong></td>
-                            <td>Organizar demandas</td>
-                            <td>Casos de uso</td>
-                            <td>Criar stories, priorizar</td>
-                            <td>Stories priorizadas</td>
-                            <td>Mantido pelo professor</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Refinamento</strong></td>
-                            <td>Preparar stories</td>
-                            <td>Story bruta</td>
-                            <td>Quebrar em tasks, estimar</td>
-                            <td>Story pronta (DoR)</td>
-                            <td>Participação de todo time</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Sprint Planning</strong></td>
-                            <td>Planejar Sprint</td>
-                            <td>Backlog priorizado</td>
-                            <td>Selecionar stories, definir líder</td>
-                            <td>Sprint Backlog + Líder</td>
-                            <td>Baseado na capacidade real</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Desenvolvimento</strong></td>
-                            <td>Construir solução</td>
-                            <td>Tasks da Sprint</td>
-                            <td>Codar, testar, revisar</td>
-                            <td>PRs para revisão</td>
-                            <td>Sprint com escopo fechado</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Revisão (PR)</strong></td>
-                            <td>Garantir qualidade</td>
-                            <td>Pull Request</td>
-                            <td>Code review por pares</td>
-                            <td>PR aprovado</td>
-                            <td>Mínimo 1 aprovação</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Testes</strong></td>
-                            <td>Validar funcionalidade</td>
-                            <td>Código aprovado</td>
-                            <td>Testes auto + manuais</td>
-                            <td>Story validada</td>
-                            <td>Cobertura de testes adequada</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Review</strong></td>
-                            <td>Validar valor</td>
-                            <td>Sprint concluída</td>
-                            <td>Demonstração ao professor</td>
-                            <td>Feedback e aceite</td>
-                            <td>Transparência total</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Retrospectiva</strong></td>
-                            <td>Melhorar processo</td>
-                            <td>Dados da Sprint</td>
-                            <td>Análise e definição de ações</td>
-                            <td>2-3 ações práticas</td>
-                            <td>Participação obrigatória</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="benefit-item">
+              <span class="benefit-icon">🤝</span>
+              <p><strong>Trabalho colaborativo</strong> efetivo</p>
             </div>
-        </section>
-
-        <section id="encerramento" class="section conclusion">
-            <h2>10. Encerramento</h2>
-            <div class="conclusion-box">
-                <h3>🎓 O SPARK-Scrum garante:</h3>
-                <div class="benefits-grid">
-                    <div class="benefit-item">
-                        <span class="benefit-icon">📋</span>
-                        <p><strong>Organização clara</strong> do projeto</p>
-                    </div>
-                    <div class="benefit-item">
-                        <span class="benefit-icon">🎯</span>
-                        <p><strong>Aprendizado real</strong> de Scrum</p>
-                    </div>
-                    <div class="benefit-item">
-                        <span class="benefit-icon">⚙️</span>
-                        <p><strong>Disciplina técnica</strong> profissional</p>
-                    </div>
-                    <div class="benefit-item">
-                        <span class="benefit-icon">✅</span>
-                        <p><strong>Avaliação justa</strong> e transparente</p>
-                    </div>
-                    <div class="benefit-item">
-                        <span class="benefit-icon">💼</span>
-                        <p><strong>Preparação prática</strong> para o mercado</p>
-                    </div>
-                    <div class="benefit-item">
-                        <span class="benefit-icon">🤝</span>
-                        <p><strong>Trabalho colaborativo</strong> efetivo</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p><strong>SPARK-Scrum</strong> - Student Process for Agile Research & Knowledge</p>
-            <p>Processo de Desenvolvimento de Software Acadêmico Baseado em Scrum</p>
-            <p>© 2026 - Documentação do Processo Ágil para Projetos Educacionais</p>
-        </div>
+      <div class="container">
+        <p>
+          <strong>SPARK-Scrum</strong> - Student Process for Agile Research &
+          Knowledge
+        </p>
+        <p>
+          Processo de Desenvolvimento de Software Acadêmico Baseado em Scrum
+        </p>
+        <p>© 2026 - Documentação do Processo Ágil para Projetos Educacionais</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
